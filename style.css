@@ -1,0 +1,269 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(3,37,109);
+    background: linear-gradient(90deg, rgba(3,37,109,1) 0%, rgb(19, 17, 66) 50%, rgb(12, 60, 116) 100%);
+    background-size: 200% 200%;
+    animation: gradientMove 15s infinite;
+    font-family: "Reem Kufi", sans-serif;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Particles */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.count-particles {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    color: #FFCA40;
+    font-size: 0.8em;
+    text-align: left;
+    z-index: 2;
+}
+
+/* Starting Point */
+.starting-point {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+    background: rgba(3, 37, 109, 0.8);
+    backdrop-filter: blur(10px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.starting-point img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 15vh;
+}
+
+.starting-point h1 {
+    font-size: 42px;
+    color: #FFCA40;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 202, 64, 0.5);
+    font-family: "Forum", serif;
+}
+
+.starting-point .btn {
+    background-color: #FFCA40;
+    color: #03256d;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.starting-point .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Parallax Sections */
+.parallax-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.parallax-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax-section h2 {
+    font-size: 42px;
+    color: #FFCA40;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 202, 64, 0.5);
+    font-family: "Forum", serif;
+}
+
+.parallax-section p {
+    font-size: 20px;
+    color: white;
+    max-width: 800px;
+    line-height: 1.8;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-section .btn {
+    background-color: #FFCA40;
+    color: #03256d;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.parallax-section .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+    z-index: 10;
+    background-color: rgba(3, 37, 109, 0.8);
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 202, 64, 0.5);
+    opacity: 0;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.visible {
+    opacity: 1;
+}
+
+.navbar a {
+    color: #FFCA40;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.navbar a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFCA40;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover:after {
+    width: 100%;
+}
+
+/* Styling untuk navbar dan tombol audio */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.audio-control-container {
+    margin-left: 15px;
+}
+
+.audio-btn {
+    background: none;
+    border: 2px solid #FFCA40;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.audio-btn:hover {
+    background-color: rgba(255, 202, 64, 0.2);
+}
+
+.audio-btn i {
+    color: #FFCA40;
+    font-size: 18px;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    background: rgba(3, 37, 109, 0.8);
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #FFCA40;
+    z-index: 2;
+}
+
+footer a {
+    color: #FFCA40;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px rgba(255, 202, 64, 0.8);
+}
+
+/* Animations */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

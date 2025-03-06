@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Kufi+Arabic:wght@100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="LogoTaxLab.png">
+    <title>Bukber - Tax Laboratory</title>
+</head>
+<body>
+    <!-- Particles background -->
+    <div id="particles-js"></div>
+    <div class="count-particles"><span class="js-count-particles"></span></div>
+
+    <!-- Starting Point -->
+    <div class="starting-point" id="startingPoint">
+        <img src="ramadhan.png" class="logo">
+        <h1>Buka Taxjil : Berbagi Manis di Bulan Ramadhan</h1>
+        <button class="btn" onclick="openParallax()">Buka Undangan</button>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-links">
+            <a href="#date">Tanggal</a>
+            <a href="#location">Lokasi</a>
+            <a href="#details">Detail Acara</a>
+            <a href="#registration">Pendaftaran</a>
+        </div>
+        
+        <!-- Button Play/Pause Audio - sekarang terpisah dari navbar -->
+        <div class="audio-control-container">
+            <button id="audio-control" class="audio-btn">
+                <i id="audio-icon" class="fas fa-play"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Lagu -->
+    <audio id="background-audio" loop>
+        <source src="Tob_Tobi_Tob_Tob_Tobi_Tob__Lyrics_Video_and_Translate_140-drc.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Date Section -->
+    <section class="parallax-section" id="date">
+        <h2>Tanggal & Waktu</h2>
+        <p>
+            <strong>15 Ramadan 1446 H</strong><br>
+            <strong>Sabtu, 15 Maret 2025</strong><br>
+            <strong>17:00 WIB - Selesai</strong>
+        </p>
+        <p>
+            Mari kita berkumpul untuk menyambut berbuka puasa bersama.
+        </p>
+    </section>
+
+    <!-- Location Section -->
+    <section class="parallax-section" id="location">
+        <h2>Lokasi</h2>
+        <p>
+            <strong>Pondok Laras</strong><br>
+            Jl. Akses UI No.2, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat
+        </p>
+    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13920.563337317866!2d106.84803684028061!3d-6.356863036128137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec5cb41ed3df%3A0xdfd6d8d2eb933747!2sPondok%20Laras!5e0!3m2!1sid!2sid!4v1741280187249!5m2!1sid!2sid" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    
+
+    <!-- Details Section -->
+    <section class="parallax-section" id="details">
+        <h2>Detail Acara</h2>
+        <p>
+            Beragam kegiatan telah kami siapkan untuk memeriahkan acara buka puasa bersama.
+        </p>
+        <ul>
+            <li><strong>Dress Code:</strong> Baju Koko Putih untuk pria dan Gamis Putih untuk wanita</li>
+            <li><strong>17:30 - 18:00:</strong> Sambutan dan Pembukaan</li>
+            <li><strong>18:00 - 18:15:</strong> Buka Puasa Bersama</li>
+            <li><strong>18:15 - 18:45:</strong> Sholat Maghrib Berjamaah</li>
+            <li><strong>18:45 - 19:30:</strong> Tausiyah oleh Ust. Ahmad Al-Farouq</li>
+            <li><strong>19:30 - 20:00:</strong> Sholat Isya Berjamaah</li>
+            <li><strong>20:00 - Selesai:</strong> Santap Malam dan Silaturahmi</li>
+        </ul>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="parallax-section" id="registration">
+        <h2>Pendaftaran</h2>
+        <p>
+            Daftarkan diri Anda untuk menghadiri acara buka puasa bersama. Klik tombol di bawah untuk mendaftar.
+        </p>
+        <button class="btn" onclick="window.location.href='https://example.com/registration'">Daftar Sekarang</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>@<a href="https://example.com/creator" target="_blank">TaxLaboratory</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
